@@ -57,6 +57,10 @@ body{
   min-height:200px;
 }
 
+#promo .jumbotron .row img:hover {
+    transform: rotate(45deg);
+}
+
 @media (max-width:767px) {
   #promo .jumbotron .row img{
     min-width:200px;
