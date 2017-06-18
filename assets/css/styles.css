@@ -1,0 +1,144 @@
+body{
+  background-color:rgb(220,220,220);
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.navbar{
+  background-color:rgba(255,80,80,1);
+  margin-bottom:0;
+}
+
+#promo{
+  padding:20px;
+  padding-top:65px;
+  padding-bottom:0;
+  text-align:center;
+}
+
+@media (max-width:991px) {
+  #promo{
+    padding:10px;
+    padding-top:55px;
+    padding-bottom:0;
+  }
+}
+
+#promo .jumbotron{
+  padding:0;
+  background:rgb(255,230,230);
+  max-width:800px;
+  margin:0 auto;
+  margin-bottom:20px;
+}
+
+@media (max-width:767px) {
+  #promo .jumbotron{
+    margin-bottom:10px;
+  }
+}
+
+#promo .jumbotron .row{
+  margin:0;
+  align-content:center;
+}
+
+@media (max-width:991px) {
+  #promo .jumbotron .row{
+    padding:0;
+  }
+}
+
+#promo .img-column{
+  background-color:rgba(255,255,255,1);
+}
+
+#promo .jumbotron .row img{
+  margin:auto;
+  min-height:200px;
+}
+
+@media (max-width:767px) {
+  #promo .jumbotron .row img{
+    min-width:200px;
+  }
+}
+
+#promo .name-column{
+  background-color:rgba(255,80,80,1);
+  padding-top:15px;
+  color:#fff;
+}
+
+@media (max-width:767px) {
+  #promo .jumbotron .row .name-column{
+    margin-top:0;
+  }
+}
+
+#promo .jumbotron .row .stats-column{
+  margin-top:50px;
+}
+
+@media (max-width:767px) {
+  #promo .jumbotron .row .stats-column{
+    margin-top:15px;
+  }
+}
+
+#promo .jumbotron .row .stats-column .btn{
+  float:right;
+  background:rgba(255,80,80,1);
+  color:#FFF;
+  border:none;
+  border-radius:3px;
+}
+
+@media (max-width:767px) {
+  #promo .jumbotron .row .stats-column .btn{
+    margin-bottom:10px;
+  }
+}
+
+#promo .jumbotron .row .stats{
+  margin-top:30px;
+}
+
+@media (max-width:767px) {
+  #promo .jumbotron .row .stats{
+    margin-top:0;
+  }
+}
+
+#promo .jumbotron .row .stats p{
+  margin:0;
+  font-size:25px;
+}
+
+#promo nav .pagination li a{
+  color:rgb(0,0,0);
+  font-weight:bold;
+}
+
+#promo nav .pagination .active a{
+  background:rgba(255,80,80,1);
+  color:#FFF;
+}
+
+#promo #evolutions{
+  margin-top:80px;
+  background:rgba(200,50,50,1);
+  color:#FFF;
+  padding-top:1px;
+  padding-bottom:1px;
+}
+
+@media (max-width:767px) {
+  #promo #evolutions{
+    margin-top:35px;
+  }
+}
+
+#promo #evolutions h2{
+  margin:10px;
+  font-size:30px;
+}
