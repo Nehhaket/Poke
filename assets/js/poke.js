@@ -15,7 +15,9 @@ request.onload = () => {
     //evolutions objects
     const evolution1 = request.response;
     const evolution2 = evolution1.chain.evolves_to[0];
-    const evolution3 = evolution2.evolves_to[0];
+    if (evolution2 != undefined) {
+        const evolution3 = evolution2.evolves_to[0];
+    }
 
     //evolutions requests
     const req1 = new XMLHttpRequest();
