@@ -12,12 +12,7 @@ request.send();
 
 //evolution chain response handler
 request.onload = () => {
-    //evolutions objects
     const evolution1 = request.response;
-    const evolution2 = evolution1.chain.evolves_to[0];
-    if (evolution2 != undefined) {
-        const evolution3 = evolution2.evolves_to[0];
-    }
 
     //evolutions requests
     const req1 = new XMLHttpRequest();
@@ -26,19 +21,29 @@ request.onload = () => {
     req1.open('GET', `http://pokeapi.co/api/v2/pokemon/${evolution1.chain.species.name}`);
     req1.responseType = 'json';
     req1.send();
+
+    const evolution2 = evolution1.chain.evolves_to[0];
     if (evolution2 != undefined) {
         name2 = evolution2.species.name;
         req2.open('GET', `http://pokeapi.co/api/v2/pokemon/${evolution2.species.name}`);
         req2.responseType = 'json';
         req2.send();
+
+        const evolution3 = evolution2.evolves_to[0];
         if (evolution3 != undefined) {
             req3.open('GET', `http://pokeapi.co/api/v2/pokemon/${evolution3.species.name}`);
             req3.responseType = 'json';
             req3.send();
         }
-        else { $('#evolution3')[0].style.display = 'none'; }
+        else {
+            $('#evolution3')[0].style.display = 'none';
+        }
     }
-    else { $('#evolution2')[0].style.display = 'none'; }
+    else {
+        $('#evolutions')[0].style.display = 'none';
+        $('#evolution2')[0].style.display = 'none';
+        $('#evolution3')[0].style.display = 'none';
+    }
 
     //evolutions response handlers
     req1.onload = () => {
